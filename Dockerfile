@@ -11,7 +11,8 @@ RUN sleep 127 \
       libmpc-dev        \
       libmpfr-dev       \
       llvm              \
-      polygen
+      polygen           \
+      wget
 
 ARG CPPFLAGS
 ARG   CFLAGS
