@@ -1,4 +1,16 @@
 FROM innovanon/doom-base as builder
+RUN sleep 127 \
+ && apt update \
+ && apt full-upgrade -y \
+ && apt install -y      \
+      binutils-dev      \
+      clang             \
+      libgmp-dev        \
+      libisl-dev        \
+      libmpc-dev        \
+      libmpfr-dev       \
+      llvm              \
+      polygen
 
 ARG CPPFLAGS
 ARG   CFLAGS
