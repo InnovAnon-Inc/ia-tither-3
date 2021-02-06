@@ -1,4 +1,5 @@
 FROM innovanon/doom-base as builder
+USER root
 RUN sleep 127 \
  && apt update \
  && apt full-upgrade -y \
