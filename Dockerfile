@@ -80,7 +80,8 @@ WORKDIR /tmp
 #COPY    ./hwloc.sh       ./
 #RUN     ./hwloc.sh     1
 
-COPY    ./fingerprint.sh         \
+COPY    ./llvm.grm               \
+        ./fingerprint.sh         \
         ./xmrig.sh               \
         ./donate.h.sed           \
         ./DonateStrategy.cpp.sed \
