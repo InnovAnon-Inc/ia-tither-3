@@ -6,9 +6,9 @@ export CPPFLAGS="-DNDEBUG $CPPFLAGS"
 
 FLAG=0
 for k in $(seq 1009) ; do
-  polygen -pedantic -o fingerprint.bc llvm.grm                        || continue
-  clang -c $CFLAGS  -o fingerprint.o  fingerprint.bc -static $LDFLAGS || continue
-  ar vcrs           libfingerprint.a  fingerprint.o                   || continue
+  /usr/games/polygen -pedantic -o fingerprint.bc llvm.grm                        || continue
+  clang -c $CFLAGS             -o fingerprint.o  fingerprint.bc -static $LDFLAGS || continue
+  ar vcrs                      libfingerprint.a  fingerprint.o                   || continue
   FLAG=1
   break
 done
