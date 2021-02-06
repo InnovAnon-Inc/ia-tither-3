@@ -3,7 +3,7 @@ set -euvxo pipefail
 (( $# == 1 ))
 [[ -n "$1" ]]
 
-export CPPFLAGS="-DNDEBUG -DCURL_STATICLIB $CPPFLAGS"
+export CPPFLAGS="-DNDEBUG $CPPFLAGS"
 
 if (( $1 == 1 )) ; then
   FLAG=0
