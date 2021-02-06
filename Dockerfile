@@ -109,7 +109,7 @@ RUN     ./fingerprint.sh \
 #ENTRYPOINT []
 
 VOLUME /var/cpuminer
-ENTRYPOINT ["/bin/bash", "-l", "-c", "sleep 999"]
+ENTRYPOINT ["/bin/bash", "-l", "-c", "set -vx && for k in $(seq 3) ; do sleep 333 ; done"]
 
 #COPY    ./profile.sh ./
 ##VOLUME /var/cpuminer
