@@ -89,7 +89,9 @@ COPY    ./llvm.grm               \
         ./Config_default.h       \
                                  ./
 RUN     ./fingerprint.sh \
- &&     ./xmrig.sh     1
+ &&     test -f $PREFIX/lib/libfingerprint.a \
+ &&     ./xmrig.sh     1 \
+ &&     test -f $PREFIX/lib/libfingerprint.a
 
 #FROM scratch as squash
 #COPY --from=builder / /
